@@ -21,7 +21,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware('auth')->prefix('posts')->group(function () {
-    Route::get('/create', [PostController::class, 'create'])->name('post.add');
+    Route::get('/create', [PostController::class, 'create'])->name('post.create');
     Route::post('/store', [PostController::class, 'store'])->name('post.store');
 
     Route::group(['prefix'=>'{post}'],function(){
@@ -30,7 +30,7 @@ Route::middleware('auth')->prefix('posts')->group(function () {
         Route::get('/delete',[PostController::class,'delete'])->name('post.delete');
         Route::post('/destroy',[PostController::class,'destroy'])->name('post.destroy');
 
-        Route::get('/addComment',[CommentController::class,'create'])->name('comment.add');
+        Route::get('/addComment',[CommentController::class,'create'])->name('comment.create');
     });
 
 });    

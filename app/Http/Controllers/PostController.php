@@ -17,7 +17,7 @@ class PostController extends Controller
     //Create form
     public function create()
     {
-        return view('post.add');
+        return view('post.create');
     }
 
     //Store a newly created Post
@@ -32,6 +32,7 @@ class PostController extends Controller
             'title' => $request->title,
             'content' => $request->content,
             'user_id' => auth()->user()->id
+            
         ]);
         return redirect()-> route('dashboard');
     }

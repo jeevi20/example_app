@@ -15,13 +15,13 @@
         </div>
     </div>
 
-    <a class="btn btn-warning" href="{{route('post.add')}}" role="button">Add Post</a>
+    <a class="btn btn-warning" href="{{route('post.create')}}" role="button">Add Post</a>
 
             <table>
                 <thead>
                     <th>Id</th>
                     <th>Title</th>
-                    <th>Content</th>
+                    <!-- <th>Content</th> -->
                     <th>Created By</th>
                     <th>Comment</th>
                     <th>Edit</th>
@@ -35,7 +35,7 @@
                     <td>{{$post->title}}</td>
                     <td>{{$post->content}}</td>
                     <td>{{$post->user->name}}</td>
-                    <td><a href="{{route('comment.add',$post->id)}}">Add Comment</a></td>
+                    <td><a href="{{route('comment.create',$post->id)}}">Add Comment</a></td>
                     <td><a href="{{route('post.edit',$post->id)}}">Edit</a></td>
                     <td><a href="{{route('post.delete',$post->id)}}">Delete</a></td>
                     </tr>

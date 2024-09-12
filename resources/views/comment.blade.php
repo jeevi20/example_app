@@ -17,8 +17,7 @@
             <table>
                 <thead>
                     <th>Id</th>
-                    <th>Title</th>
-                    <th>Content</th>
+                    <th>Comment</th>
                     <th>Created By</th>
                     <th>Post_Id</th>
                     <th>Edit</th>
@@ -29,8 +28,7 @@
                     @foreach($comments as $comment)
                     <tr>
                     <td>{{$comment->id}}</td>
-                    <td>{{$comment->title}}</td>
-                    <td>{{$comment->content}}</td>
+                    <td>{{$comment->comment}}</td>
                     <td>{{$comment->user->name}}</td>
                     <td>{{$comment->post_id}}</td>
 

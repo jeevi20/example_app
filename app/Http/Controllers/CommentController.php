@@ -33,7 +33,7 @@ class CommentController extends Controller
     [
         'comment'=>$request->comment,
         'user_id'=>auth()->user()->id,
-        //'post_id'=>$request->post_id
+        'post_id'=>$request->post_id
     ]);
 
    
